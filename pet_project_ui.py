@@ -11,7 +11,6 @@ def print_menu(title, list_options, exit_message):
     print(f"\t({0})  {exit_message}")
 
 
-def user_input(list_label, title):
-    print(title)
+def user_input(list_label):
     inputs = input(f"{list_label}")
     return inputs

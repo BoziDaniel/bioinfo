@@ -4,7 +4,7 @@ import sys
 
 
 def choose():
-    inputs = pet_project_ui.user_input("Select an option: ", "")
+    inputs = pet_project_ui.user_input("Select an option: ")
     if inputs == "1":
         pass
     elif inputs == "2":
@@ -16,7 +16,7 @@ def choose():
     elif inputs == "5":
         pass
     elif inputs == "6":
-        DNA_sequence = pet_project_ui.user_input("Add DNA: ", "")
+        DNA_sequence = pet_project_ui.user_input("Add DNA: ")
         pet_project_data_manager.DNA_complementer_creation(DNA_sequence)
     elif inputs == "0":
         sys.exit()
