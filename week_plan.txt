@@ -1,0 +1,24 @@
+bioinfo - adatbazis
+DNS-t feherjere forditja
+
+-DNS: ertelmes szal, nem ertelmes szal(ninsence) -- beadunk egy DNS szalat   akkor megkapjuk
+a vele komplementer szalat
+
+-DNS -> RNS -- RNS mindig egyszalu, mindig a nonsense DNS szalrol irodik at
+ RNSben timin helyett uracil
+
+-RNS -> feherje -- bazis harmasokra bontjuk az RNSt (kodszotar hasznalata)
+ degeneralt -  (exception handling)
+ RNS darab, bazis harmasban kodolva = 1 aminosav == sok aminosav egyutt egy feherje
+
+
+
+Menu:
+-DNS -> protein
+-RNS -> protein
+-DNS -> RNS
+-RNS -> DNS
+-compare 2 DNS
+
+
+
