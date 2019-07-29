@@ -15,6 +15,8 @@ def choose():
         pass
     elif inputs == "5":
         pass
+    elif inputs == "6":
+        pass
     elif inputs == "0":
         sys.exit()
     else:
@@ -26,7 +28,8 @@ def handle_menu():
                " RNS -> protein ",
                " DNS -> RNS ",
                " RNS -> DNS ",
-               " Compare 2 DNS "]
+               " Compare 2 DNS ",
+               " DNS complementer creation "]
 
     pet_project_ui.print_menu("Main menu:", options, "Exit program")
 
