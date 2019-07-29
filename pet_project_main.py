@@ -15,17 +15,32 @@ def choose():
         pass
     elif inputs == "5":
         pass
+    elif inputs == "6":
+        pass
     elif inputs == "0":
         sys.exit()
-    """else:
-        print("wrong input")
-        sys.exit()
-"""
+    else:
+        raise KeyError("There is no such option.")
+        
+
+def handle_menu():
+    options = [" DNS -> protein ",
+               " RNS -> protein ",
+               " DNS -> RNS ",
+               " RNS -> DNS ",
+               " Compare 2 DNS ",
+               " DNS complementer creation "]
+
+    pet_project_ui.print_menu("Main menu:", options, "Exit program")
 
 
 def main():
-    print_main()
-    choose()
+    while True:
+        handle_menu()
+        try:
+            choose()
+        except KeyError as err:
+            pet_project_ui.print_error_message(str(err))
     
 
 if __name__ == "__main__":
