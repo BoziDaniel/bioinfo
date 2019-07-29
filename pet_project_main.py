@@ -4,7 +4,7 @@ import sys
 
 
 def choose():
-    inputs = pet_project_ui.user_input
+    inputs = pet_project_ui.user_input("Select an option: ", "")
     if inputs == "1":
         pass
     elif inputs == "2":
@@ -16,7 +16,8 @@ def choose():
     elif inputs == "5":
         pass
     elif inputs == "6":
-        pass
+        DNA_sequence = pet_project_ui.user_input("Add DNA: ", "")
+        pet_project_data_manager.DNA_complementer_creation(DNA_sequence)
     elif inputs == "0":
         sys.exit()
     else:
@@ -24,12 +25,12 @@ def choose():
         
 
 def handle_menu():
-    options = [" DNS -> protein ",
-               " RNS -> protein ",
-               " DNS -> RNS ",
-               " RNS -> DNS ",
-               " Compare 2 DNS ",
-               " DNS complementer creation "]
+    options = [" DNA -> protein ",
+               " RNA -> protein ",
+               " DNA -> RNA ",
+               " RNA -> DNA ",
+               " Compare 2 DNA ",
+               " DNA complementer creation "]
 
     pet_project_ui.print_menu("Main menu:", options, "Exit program")
 
