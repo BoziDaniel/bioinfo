@@ -11,7 +11,7 @@ a vele komplementer szalat
  degeneralt -  (exception handling)
  RNS darab, bazis harmasban kodolva = 1 aminosav == sok aminosav egyutt egy feherje
 
-
+dinamikus tábla a megjelenítéshez
 
 Menu:
 -DNS complementer creation  ok
