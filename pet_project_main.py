@@ -16,8 +16,9 @@ def choose():
     elif inputs == "5":
         pass
     elif inputs == "6":
-        DNA_sequence = pet_project_ui.user_input("Add DNA: ", "")
-        pet_project_data_manager.DNA_complementer_creation(DNA_sequence)
+        DNA_sequence = pet_project_ui.user_input("Add DNA: ")
+        complementer = pet_project_data_manager.DNA_complementer_creation(DNA_sequence)
+        print(f"DNA complementer: {complementer}\n")
     elif inputs == "0":
         sys.exit()
     else:
