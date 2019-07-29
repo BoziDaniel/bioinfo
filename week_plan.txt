@@ -14,7 +14,7 @@ a vele komplementer szalat
 
 
 Menu:
--DNS complementer creation
+-DNS complementer creation  ok
 -DNS -> protein
 -RNS -> protein
 -DNS -> RNS
