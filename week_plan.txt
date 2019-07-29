@@ -14,11 +14,26 @@ a vele komplementer szalat
 
 
 Menu:
+-DNS complementer creation  ok
 -DNS -> protein
 -RNS -> protein
 -DNS -> RNS
 -RNS -> DNS
 -compare 2 DNS
+-exit
 
+
+main:	print_main()
+	user_input()
+	
+
+ui:
+	def print_main
+	def user_input  - select menu point
+			- DNS
+			- RNS
+		
+
+datamanager:
 
 
