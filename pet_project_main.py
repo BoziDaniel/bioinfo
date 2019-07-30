@@ -26,7 +26,7 @@ def choose():
         sys.exit()
     else:
         raise KeyError("There is no such option.")
-        
+ 
 
 def handle_menu():
     options = [" DNA -> protein ",
