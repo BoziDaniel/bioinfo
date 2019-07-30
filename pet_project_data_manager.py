@@ -33,3 +33,7 @@ def DNA_to_RNA(inputs):
             pet_project_ui.print_error_message("contains an invalid base")
             break
     return RNA_complementer
+
+
+def RNA_to_protein(inputs):
+    
