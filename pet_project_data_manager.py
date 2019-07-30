@@ -36,4 +36,13 @@ def DNA_to_RNA(inputs):
 
 
 def RNA_to_protein(inputs):
+    n = 3
+    RNA_pcs = [inputs[i:i+n] for i in range(0, len(inputs), n)]
+    protein = []
+    for i in RNA_pcs:
+        protein.append(dict.get(i))
+
+    protein = "".join(protein)
     
+    return protein
+
