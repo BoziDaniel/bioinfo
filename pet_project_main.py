@@ -6,7 +6,9 @@ import sys
 def choose():
     inputs = pet_project_ui.user_input("\nSelect an option: ")
     if inputs == "1":
-        pass
+        DNA_sequence = pet_project_ui.user_input("\nAdd DNA: ")
+        protein = pet_project_data_manager.DNA_to_protein(DNA_sequence)
+        print(f"protein: {protein}\n")        
     elif inputs == "2":
         RNA_sequence = pet_project_ui.user_input("\nAdd RNA: ")
         protein = pet_project_data_manager.RNA_to_protein(RNA_sequence)
