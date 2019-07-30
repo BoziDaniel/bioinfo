@@ -4,19 +4,21 @@ import sys
 
 
 def choose():
-    inputs = pet_project_ui.user_input("Select an option: ")
+    inputs = pet_project_ui.user_input("\nSelect an option: ")
     if inputs == "1":
         pass
     elif inputs == "2":
         pass
     elif inputs == "3":
-        pass
+        DNA_sequence = pet_project_ui.user_input("\nAdd DNA: ")
+        RNA_complementer = pet_project_data_manager.DNA_to_RNA(DNA_sequence)
+        print(f"RNA: {RNA_complementer}\n")
     elif inputs == "4":
         pass
     elif inputs == "5":
         pass
     elif inputs == "6":
-        DNA_sequence = pet_project_ui.user_input("Add DNA: ")
+        DNA_sequence = pet_project_ui.user_input("\nAdd DNA: ")
         complementer = pet_project_data_manager.DNA_complementer_creation(DNA_sequence)
         print(f"DNA complementer: {complementer}\n")
     elif inputs == "0":
