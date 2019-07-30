@@ -1,4 +1,5 @@
 import pet_project_ui
+import pet_project_AA_code_dictionary
 
 
 def DNA_complementer_creation(inputs):
@@ -40,7 +41,7 @@ def RNA_to_protein(inputs):
     RNA_pcs = [inputs[i:i+n] for i in range(0, len(inputs), n)]
     protein = []
     for i in RNA_pcs:
-        protein.append(dict.get(i))
+        protein.append(pet_project_AA_code_dictionary.get(i))
 
     protein = "".join(protein)
     
