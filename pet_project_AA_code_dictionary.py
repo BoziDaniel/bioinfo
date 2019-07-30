@@ -65,3 +65,4 @@ def AA_dictionary():
         "AGG":"Arg",		
         "GGG":"Gly"
     }
+    return AA_dict
