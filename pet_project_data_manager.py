@@ -40,8 +40,8 @@ def RNA_to_protein(inputs):
     n = 3
     RNA_pcs = [inputs[i:i+n] for i in range(0, len(inputs), n)]
     protein = []
-    for i in RNA_pcs:
-        protein.append(pet_project_AA_code_dictionary.get(i))
+    for triplet in RNA_pcs:
+        protein.append(pet_project_AA_code_dictionary.AA_dict.get(triplet))
 
     protein = "".join(protein)
     

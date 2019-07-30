@@ -9,7 +9,8 @@ def choose():
         pass
     elif inputs == "2":
         RNA_sequence = pet_project_ui.user_input("\nAdd RNA: ")
-        pet_project_data_manager.RNA_to_protein(RNA_sequence)
+        protein = pet_project_data_manager.RNA_to_protein(RNA_sequence)
+        print(f"protein: {protein}\n")
     elif inputs == "3":
         DNA_sequence = pet_project_ui.user_input("\nAdd DNA: ")
         RNA_complementer = pet_project_data_manager.DNA_to_RNA(DNA_sequence)
