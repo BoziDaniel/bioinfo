@@ -82,3 +82,5 @@ def count_STOP_in_protein(protein):
     STOPs_in_protein = []
     STOPs_in_protein.append(re.search("STOP.", protein))
     return len(STOPs_in_protein)
+
+
