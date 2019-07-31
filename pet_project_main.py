@@ -56,6 +56,8 @@ def handle_menu():
     pet_project_ui.print_menu("Main menu:", options, "Exit program")
 
 
+<<<<<<< HEAD
+=======
 def option_to_save_file(result):
     y_or_n = pet_project_data_manager.user_input("\nWould you like to save the file? y/n ")
     if y_or_n == "y":
@@ -63,6 +65,7 @@ def option_to_save_file(result):
         pet_project_data_manager.handle_file(file_name, result)
 
 
+>>>>>>> 72a3372463277546910418bc5df9eff9d35c2e6e
 def main():
     while True:
         handle_menu()
