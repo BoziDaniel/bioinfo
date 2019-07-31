@@ -14,7 +14,8 @@ def choose():
         DNA_sequence = pet_project_ui.user_input("\nAdd DNA: ")
         protein = pet_project_data_manager.DNA_to_protein(DNA_sequence)
         print(f"STOP in protein: {pet_project_data_manager.count_STOP_in_protein(protein)}")
-        print(f"protein: {protein}\n")      
+        print(f"protein: {protein}\n")
+             
     elif inputs == "2":
         RNA_sequence = pet_project_ui.user_input("\nAdd RNA: ")
         protein = pet_project_data_manager.RNA_to_protein(RNA_sequence)
@@ -50,14 +51,6 @@ def handle_menu():
                " Open existing file "]
 
     pet_project_ui.print_menu("Main menu:", options, "Exit program")
-
-
-
-def option_to_save_file(result):
-    y_or_n = pet_project_data_manager.user_input("\nWould you like to save the file? y/n ")
-    if y_or_n == "y":
-        file_name = pet_project_data_manager.user_input("\nAdd a file name following with .txt: ")
-        pet_project_data_manager.handle_file(file_name, result)
 
 
 def main():

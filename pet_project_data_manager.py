@@ -73,8 +73,6 @@ def RNA_to_protein(inputs):
 def DNA_to_protein(inputs):
     RNA_complementer = DNA_to_RNA(inputs)
     protein = RNA_to_protein(RNA_complementer)
-    result = (protein)
-    return result
     return protein
 
 
