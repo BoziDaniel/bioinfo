@@ -38,6 +38,25 @@ def DNA_to_RNA(inputs):
     return RNA_complementer
 
 
+def RNA_to_DNA(inputs):
+    RNA = inputs
+    DNA_complementer_to_RNA = ""
+    for base in RNA:
+        if base == "A":
+            DNA_complementer_to_RNA += "T"
+        elif base == "U":
+            DNA_complementer_to_RNA += "A"
+        elif base == "C":
+            DNA_complementer_to_RNA += "G"
+        elif base == "G":
+            DNA_complementer_to_RNA += "C"
+        else:
+            pet_project_ui.print_error_message("contains an invalid base")
+            break
+    RNA_complementer = DNA_complementer_creation(DNA_complementer_to_RNA)
+    return RNA_complementer
+
+
 def RNA_to_protein(inputs):
     n = 3
     RNA_pcs = [inputs[i:i+n] for i in range(0, len(inputs), n)]
