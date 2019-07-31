@@ -95,3 +95,9 @@ def handle_file(inputs, result):
     file = open(inputs, "a")
     file.write(result)
     file.close()
+
+
+def open_existing_file(file_name):
+    with open(file_name, "r") as file:
+        text = file.read()
+    print("\n" + text + "\n")

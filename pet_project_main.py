@@ -37,9 +37,8 @@ def choose():
         print(f"DNA complementer: {complementer}\n")
         pet_project_data_manager.option_to_save_file(complementer)
     elif inputs == "6":
-        pass
-        # file_name = pet_project_data_manager.user_input("\nAdd existing file name: ")
-        #open file(file_name) and show
+        file_name = pet_project_ui.user_input("\nAdd existing file name: ")
+        pet_project_data_manager.open_existing_file(file_name)
     elif inputs == "0":
         sys.exit()
     else:
