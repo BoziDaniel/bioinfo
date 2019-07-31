@@ -14,3 +14,4 @@ def print_menu(title, list_options, exit_message):
 def user_input(list_label):
     inputs = input(f"{list_label}")
     return inputs
+

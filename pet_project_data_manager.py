@@ -73,8 +73,8 @@ def RNA_to_protein(inputs):
 def DNA_to_protein(inputs):
     RNA_complementer = DNA_to_RNA(inputs)
     protein = RNA_to_protein(RNA_complementer)
-    print(count_STOP_in_protein(protein))
-    print(protein)
+    result = (protein)
+    return result
     return protein
 
 
@@ -82,5 +82,19 @@ def count_STOP_in_protein(protein):
     STOPs_in_protein = []
     STOPs_in_protein.append(re.search("STOP.", protein))
     return len(STOPs_in_protein)
+
+
+def option_to_save_file(result):
+    y_or_n = pet_project_ui.user_input("\nWould you like to save the file? y/n ")
+    if y_or_n == "y":
+        file_name = pet_project_ui.user_input("\nAdd a file name following with .txt: ")
+        handle_file(file_name, result)
+
+
+def handle_file(inputs, result):
+    file = open(inputs, "x")
+    file = open(inputs, "a")
+    file.write(result) 
+    file.close()
 
 
