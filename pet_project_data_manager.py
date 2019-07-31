@@ -92,7 +92,5 @@ def option_to_save_file(result):
 def handle_file(inputs, result):
     file = open(inputs, "x")
     file = open(inputs, "a")
-    file.write(result) 
+    file.write(result)
     file.close()
-
-
