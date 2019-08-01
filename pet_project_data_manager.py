@@ -1,6 +1,5 @@
-import pet_project_ui
+import pet_project_ui as ui
 import pet_project_AA_code_dictionary
-import re
 
 
 def DNA_complementer_creation(inputs):
@@ -15,7 +14,7 @@ def DNA_complementer_creation(inputs):
         elif base == "G":
             complementer += "C"
         else:
-            pet_project_ui.print_error_message("contains an invalid base")
+            ui.print_error_message("contains an invalid base")
             break
     return complementer
 
@@ -33,7 +32,7 @@ def DNA_to_RNA(inputs):
         elif base == "G":
             RNA_complementer += "C"
         else:
-            pet_project_ui.print_error_message("contains an invalid base")
+            ui.print_error_message("contains an invalid base")
             break
     return RNA_complementer
 
@@ -50,7 +49,7 @@ def RNA_to_DNA(RNA):
         elif base == "G":
             DNA_complementer_to_RNA += "C"
         else:
-            pet_project_ui.print_error_message("contains an invalid base")
+            ui.print_error_message("contains an invalid base")
                 
     RNA_complementer = DNA_complementer_creation(DNA_complementer_to_RNA)
     return RNA_complementer
@@ -76,15 +75,14 @@ def DNA_to_protein(inputs):
 
 
 def count_STOP_in_protein(protein):
-    STOPs_in_protein = []
-    STOPs_in_protein.append(re.search("STOP.", protein))
-    return len(STOPs_in_protein)
+    number_of_STOPS = protein.count("STOP")
+    return number_of_STOPS
 
 
 def option_to_save_file(result):
-    y_or_n = pet_project_ui.user_input("\nWould you like to save the file? y/n ")
+    y_or_n = ui.user_input("\nWould you like to save the file? y/n ", ["y", "n"])
     if y_or_n == "y":
-        file_name = pet_project_ui.user_input("\nAdd a file name following with .txt: ")
+        file_name = ui.user_input("\nAdd a file name following with .txt: ", ["y", "n"])
         handle_file(file_name, result)
 
 

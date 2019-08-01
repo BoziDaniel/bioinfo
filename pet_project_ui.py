@@ -11,13 +11,13 @@ def print_menu(title, list_options, exit_message):
     print(f"\t({0})  {exit_message}")
 
 
-def user_input(list_label, valid_characters):
+def user_input(question, valid_characters):
     while True:
         try:
-            inputs = input(f"{list_label}")
+            inputs = input(f"{question}")
             for i in inputs:
                 if i not in valid_characters:
-                    break
+                    raise (ValueError, TypeError)
             break
         except (ValueError, TypeError):
             print("Iiiiii")
