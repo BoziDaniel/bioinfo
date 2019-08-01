@@ -44,8 +44,8 @@ def choose():
         clear()
     elif inputs == "6":
         file_name = input("\nAdd existing file name: ")
-        dm.open_existing_file(file_name)
         clear()
+        dm.open_existing_file(file_name)
     elif inputs == "0":
         sys.exit()
     else:

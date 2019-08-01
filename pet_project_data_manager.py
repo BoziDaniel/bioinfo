@@ -1,5 +1,6 @@
 import pet_project_ui as ui
 import pet_project_AA_code_dictionary as AA_code_table
+import pet_project_main
 from time import sleep
 
 
@@ -83,7 +84,7 @@ def count_STOP_in_protein(protein):
 def option_to_save_file(result):
     y_or_n = ui.user_input("\nWould you like to save the file? y/n ", ["y", "n"])
     if y_or_n == "y":
-        file_name = input("\nAdd a file name following with .txt: ")
+        file_name = input("\nAdd a file name followed by .txt: ")
         handle_file(file_name, result)
         print(f"{file_name} has been saved! ")
         sleep(3)
@@ -103,7 +104,9 @@ def open_existing_file(file_name):
                 text = file.read()
         except FileNotFoundError as error:
             print(error)
+            sleep(4)
+            pet_project_main.clear()
             break
         else:
-            print("\n" + text + "\n")
+            print("Content of your file:\n" + text + "\n")
             break
