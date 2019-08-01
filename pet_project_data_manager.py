@@ -82,7 +82,7 @@ def count_STOP_in_protein(protein):
 def option_to_save_file(result):
     y_or_n = ui.user_input("\nWould you like to save the file? y/n ", ["y", "n"])
     if y_or_n == "y":
-        file_name = ui.user_input("\nAdd a file name following with .txt: ", ["y", "n"])
+        file_name = input("\nAdd a file name following with .txt: ")
         handle_file(file_name, result)
 
 
