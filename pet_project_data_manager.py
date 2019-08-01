@@ -1,5 +1,6 @@
 import pet_project_ui as ui
 import pet_project_AA_code_dictionary as AA_code_table
+from time import sleep
 
 
 def DNA_complementer_creation(DNA_template):
@@ -84,6 +85,8 @@ def option_to_save_file(result):
     if y_or_n == "y":
         file_name = input("\nAdd a file name following with .txt: ")
         handle_file(file_name, result)
+        print(f"{file_name} has been saved! ")
+        sleep(3)
 
 
 def handle_file(file_name, result):
