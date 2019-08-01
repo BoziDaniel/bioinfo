@@ -1,5 +1,5 @@
 def print_error_message(message):
-    print(f'Error: @{message}')
+    print(f'Error: {message}')
 
 
 def print_menu(title, list_options, exit_message):
@@ -11,7 +11,15 @@ def print_menu(title, list_options, exit_message):
     print(f"\t({0})  {exit_message}")
 
 
-def user_input(list_label):
-    inputs = input(f"{list_label}")
+def user_input(list_label, valid_characters):
+    while True:
+        try:
+            inputs = input(f"{list_label}")
+            for i in inputs:
+                if i not in valid_characters:
+                    break
+            break
+        except (ValueError, TypeError):
+            print("Iiiiii")
     return inputs
 

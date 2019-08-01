@@ -38,8 +38,7 @@ def DNA_to_RNA(inputs):
     return RNA_complementer
 
 
-def RNA_to_DNA(inputs):
-    RNA = inputs
+def RNA_to_DNA(RNA):
     DNA_complementer_to_RNA = ""
     for base in RNA:
         if base == "A":
@@ -52,7 +51,7 @@ def RNA_to_DNA(inputs):
             DNA_complementer_to_RNA += "C"
         else:
             pet_project_ui.print_error_message("contains an invalid base")
-            break
+                
     RNA_complementer = DNA_complementer_creation(DNA_complementer_to_RNA)
     return RNA_complementer
 
