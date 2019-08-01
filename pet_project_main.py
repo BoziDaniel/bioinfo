@@ -27,17 +27,17 @@ def choose():
     elif inputs == "3":
         DNA_sequence = ui.user_input("\nAdd DNA: ", ["A", "T", "C", "G"])
         RNA_complementer = dm.DNA_to_RNA(DNA_sequence)
-        print(f"RNA: {RNA_complementer}\n")
+        print("RNA: " + (RNA_complementer).rjust(8, " ") + "\n")
         dm.option_to_save_file(RNA_complementer)
         clear()
     elif inputs == "4":
         RNA_sequence = ui.user_input("\nAdd RNA: ", ["A", "U", "C", "G"])
         DNA = dm.RNA_to_DNA(RNA_sequence)
-        print(f"DNA: {DNA}\n")
+        print("DNA: " + (DNA).rjust(8, " ") + "\n")
         dm.option_to_save_file(DNA)
         clear()
     elif inputs == "5":
-        DNA_sequence = ui.user_input("\nAdd DNA: ", ["A", "T", "C", "G"])
+        DNA_sequence = ui.user_input(("\nAdd DNA: ").ljust(19, " "), ["A", "T", "C", "G"])
         complementer = dm.DNA_complementer_creation(DNA_sequence)
         print(f"DNA complementer: {complementer}\n")
         dm.option_to_save_file(complementer)
