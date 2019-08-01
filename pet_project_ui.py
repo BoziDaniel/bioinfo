@@ -20,6 +20,5 @@ def user_input(question, valid_characters):
                     raise (ValueError, TypeError)
             break
         except (ValueError, TypeError):
-            print("Iiiiii")
+            print("Invalid input, please try again.")
     return inputs
-

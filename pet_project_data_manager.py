@@ -1,10 +1,10 @@
 import pet_project_ui as ui
-import pet_project_AA_code_dictionary
+import pet_project_AA_code_dictionary as AA_code_table
 
 
-def DNA_complementer_creation(inputs):
+def DNA_complementer_creation(DNA_template):
     complementer = ""
-    for base in inputs:
+    for base in DNA_template:
         if base == "A":
             complementer += "T"
         elif base == "T":
@@ -19,8 +19,8 @@ def DNA_complementer_creation(inputs):
     return complementer
 
 
-def DNA_to_RNA(inputs):
-    DNA_complementer = DNA_complementer_creation(inputs)
+def DNA_to_RNA(DNA_template):
+    DNA_complementer = DNA_complementer_creation(DNA_template)
     RNA_complementer = ""
     for base in DNA_complementer:
         if base == "A":
@@ -50,26 +50,26 @@ def RNA_to_DNA(RNA):
             DNA_complementer_to_RNA += "C"
         else:
             ui.print_error_message("contains an invalid base")
-                
+
     RNA_complementer = DNA_complementer_creation(DNA_complementer_to_RNA)
     return RNA_complementer
 
 
-def RNA_to_protein(inputs):
-    n = 3
-    RNA_pcs = [inputs[i:i+n] for i in range(0, len(inputs), n)]
+def RNA_to_protein(RNA):
+    triplet_lenght = 3
+    RNA_pcs = [RNA[i:i+triplet_lenght] for i in range(0, len(RNA), triplet_lenght)]
     protein = []
     for triplet in RNA_pcs:
         if len(triplet) < 3:
             pass
         else:
-            protein.append(pet_project_AA_code_dictionary.AA_dict.get(triplet))
+            protein.append(AA_code_table.AA_dict.get(triplet))
     protein = "-".join(protein)
     return protein
 
 
-def DNA_to_protein(inputs):
-    RNA_complementer = DNA_to_RNA(inputs)
+def DNA_to_protein(DNA):
+    RNA_complementer = DNA_to_RNA(DNA)
     protein = RNA_to_protein(RNA_complementer)
     return protein
 
@@ -86,14 +86,21 @@ def option_to_save_file(result):
         handle_file(file_name, result)
 
 
-def handle_file(inputs, result):
-    file = open(inputs, "x")
-    file = open(inputs, "a")
+def handle_file(file_name, result):
+    file = open(file_name, "x")
+    file = open(file_name, "a")
     file.write(result)
     file.close()
 
 
 def open_existing_file(file_name):
-    with open(file_name, "r") as file:
-        text = file.read()
-    print("\n" + text + "\n")
+    while True:
+        try:
+            with open(file_name, "r") as file:
+                text = file.read()
+        except FileNotFoundError as error:
+            print(error)
+            break
+        else:
+            print("\n" + text + "\n")
+            break
